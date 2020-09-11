@@ -5,13 +5,13 @@ if [ ! "$BASH_VERSION" ] ; then
 fi
 set +x # ! DEBUGGING CONTROL
 if [ ! -f 'pipeline-scan.jar' ]
-    then ECHO 'No se encuentra el archivo auxiliar pipeline-scan.jar, descargando:'
+    then echo 'No se encuentra el archivo auxiliar pipeline-scan.jar, descargando:'
         if [ ! -f 'pipeline-scan-LATEST.zip' ]
             then
                 curl -O https://downloads.veracode.com/securityscan/pipeline-scan-LATEST.zip;
         fi
         unzip pipeline-scan-LATEST.zip;
-    else ECHO 'pipeline-scan... OK'
+    else echo 'pipeline-scan... OK'
 fi
 
 # * SET CREDENTIALS
