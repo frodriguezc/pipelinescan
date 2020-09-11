@@ -19,7 +19,7 @@ vid=<YOUR API ID>
 vkey=<YOUR API KEY>
 
 # * SET FILES TO SCAN AS AN ARRAY
-filesToScan=($(find ./ -iname "*.jar" -o -iname "*.war"));
+filesToScan=($(find ./ -iname "*.js"));
 for file in ${!filesToScan[@]}
 do
     if [[ ${filesToScan[$file]} != ./pipeline-scan.jar ]]; then # * EXCLUDES PIPELINESCAN JAVA
