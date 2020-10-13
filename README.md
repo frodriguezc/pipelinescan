@@ -13,6 +13,6 @@ Created JavaScript Branch for JS and TS files within the scanned project
 ----------------
 13th Oct 2020:
 
-Credentials must be stored in ~/.veracode/apikey
+Credentials must be stored in ~/.veracode/credentials
 
 UI messages translated to English
