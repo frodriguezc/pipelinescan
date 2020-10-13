@@ -22,7 +22,7 @@ vkey=$(awk 'FNR == 3 {print $3}' ~/.veracode/apikey);
 filesToScan=($(find ./ -iname "*.jar" -o -iname "*.war"));
 for file in ${!filesToScan[@]}
 do
-    if [ ${filesToScan[$file]} != ./pipeline-scan.jar ]; then # * EXCLUDES PIPELINESCAN JAVA
+    if [ ${filesToScan[$file]} != .//pipeline-scan.jar ]; then # * EXCLUDES PIPELINESCAN JAVA
         echo Analizando archivo $file: ${filesToScan[$file]}
         java -jar pipeline-scan.jar -vid $vid -vkey $vkey -f ${filesToScan[$file]} -sf $file'_res_pl_scan.txt'  -so true -id true -jf $file'_res_pl_scan.json' -t 4
     fi
