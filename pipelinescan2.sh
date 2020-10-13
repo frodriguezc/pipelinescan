@@ -15,8 +15,8 @@ if [ ! -f 'pipeline-scan.jar' ]
 fi
 
 # * SET CREDENTIALS
-vid=$(awk 'FNR == 2 {print $3}' ~/.veracode/apikey);
-vkey=$(awk 'FNR == 3 {print $3}' ~/.veracode/apikey);
+vid=$(awk 'FNR == 2 {print $3}' ~/.veracode/credentials);
+vkey=$(awk 'FNR == 3 {print $3}' ~/.veracode/credentials);
 
 # * SET FILES TO SCAN AS AN ARRAY
 filesToScan=($(find ./ -iname "*.jar" -o -iname "*.war"));
